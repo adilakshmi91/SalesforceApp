@@ -39,7 +39,7 @@ public class MySettings extends LaunchBrowser {
 	  driver.findElement(By.xpath("//span[@class='folderIcon DisplayAndLayout_icon']")).click();
 	  Thread.sleep(6000);
 	  WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("CustomizeTabs_font"))));
+	  wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("CustomizeTabs_font"))));
 		WebElement custom=driver.findElement(By.id("CustomizeTabs_font"));
 	   Actions act3=new Actions(driver);
 	  act3.moveToElement(custom).click().build().perform();

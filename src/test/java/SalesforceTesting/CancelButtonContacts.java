@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import BrowserUtility.LaunchBrowser;
 
-public class CcancelButtonContacts extends LaunchBrowser {
+public class CancelButtonContacts extends LaunchBrowser {
 
 	public static void main(String[] args) throws Exception {
 		ChromeDriver driver = getChromedriver();

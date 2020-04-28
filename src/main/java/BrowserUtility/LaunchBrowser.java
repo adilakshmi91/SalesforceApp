@@ -5,6 +5,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LaunchBrowser {
-	static ChromeDriver driver;
+	    static ChromeDriver driver;
 	    public static ChromeDriver getChromedriver() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
@@ -53,25 +54,23 @@ public class LaunchBrowser {
 		    XSSFSheet Sheet2 = myExcelBook.getSheet("opty");
 			return Sheet2;
 	         }
-	         public static XSSFSheet readLeads() throws Exception {
+	            public static XSSFSheet readLeads() throws Exception {
 	 			String file = "C:\\Users\\adila\\OneDrive\\Desktop\\Logindetails.xlsx";
 	 			FileInputStream fi = new FileInputStream(file);
-	 			@SuppressWarnings("resource")
-	 			XSSFWorkbook myExcelBook = new XSSFWorkbook(fi);
+	 		    XSSFWorkbook myExcelBook = new XSSFWorkbook(fi);
 	 		    XSSFSheet Sheet3 = myExcelBook.getSheet("Leads");
 	 			return Sheet3;
 	         }
 	         
-	         public static XSSFSheet readAccount() throws Exception {
+	                public static XSSFSheet readAccount() throws Exception {
 		 			String file = "C:\\Users\\adila\\OneDrive\\Desktop\\Logindetails.xlsx";
 		 			FileInputStream fi = new FileInputStream(file);
-		 			@SuppressWarnings("resource")
 		 			XSSFWorkbook myExcelBook = new XSSFWorkbook(fi);
 		 		    XSSFSheet Sheet4 = myExcelBook.getSheet("Accounts");
 		 			return Sheet4;
 		         }
 	         
-	         static void waitForPageElementToVisible(WebElement eleToWait) {
+	           public static void waitForPageElementToVisible(WebElement eleToWait) {
 	     		WebDriverWait wait = new WebDriverWait(LaunchBrowser.driver, 30);
 	     		wait.until(ExpectedConditions.visibilityOf(eleToWait));
 	     		
