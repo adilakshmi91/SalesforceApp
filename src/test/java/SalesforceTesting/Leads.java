@@ -10,7 +10,7 @@ import BrowserUtility.LaunchBrowser;
 public class Leads extends LaunchBrowser {
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
+	  getChromedriver();
 		XSSFSheet Sheet = readfile();
 		Row row = Sheet.getRow(1);
 		driver.findElement(By.id("username")).sendKeys(row.getCell(0).getStringCellValue());

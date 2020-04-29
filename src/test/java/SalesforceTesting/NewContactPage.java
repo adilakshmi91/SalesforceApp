@@ -10,9 +10,9 @@ import BrowserUtility.LaunchBrowser;
 public class NewContactPage extends LaunchBrowser {
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
-		@SuppressWarnings("unused")
-		XSSFSheet Sheet = readfile();
+		 getChromedriver();
+		
+	     readfile();
 		driver.findElement(By.xpath("//li[@id='Contact_Tab']")).click();
 		Thread.sleep(10000);
 		driver.findElement(By.xpath("//input[@name='new']")).click();

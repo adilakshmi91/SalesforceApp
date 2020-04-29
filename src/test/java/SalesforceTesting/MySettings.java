@@ -17,9 +17,9 @@ public class MySettings extends LaunchBrowser {
 
 	public static void main(String[] args) throws Exception {
 		
-      ChromeDriver driver = getChromedriver();
-	  @SuppressWarnings("unused")
-	XSSFSheet Sheet = readfile();
+      getChromedriver();
+	  
+	readfile();
 	  Thread.sleep(5000);
 	  driver.findElement(By.id("userNavLabel")).click();
 	  WebElement settings=driver.findElement(By.xpath("//a[contains(text(),'My Settings')]"));
@@ -49,7 +49,7 @@ public class MySettings extends LaunchBrowser {
 	  scroll.click();
 	 @SuppressWarnings("unused")
 	 WebElement Availabletabs=driver.findElement(By.id("duel_select_0"));
-	 driver.getMouse();
+	// driver.getMouse();
 	 JavascriptExecutor je = (JavascriptExecutor) driver;
      WebElement reports=driver.findElement(By.xpath("//option[contains(text(),'Reports')]"));
      je.executeScript("arguments[0].scrollIntoView()",reports);

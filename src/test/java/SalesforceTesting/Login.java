@@ -7,9 +7,10 @@ public class Login extends LaunchBrowser {
 
 	public static void main(String[] args) throws Exception {
 		
-		ChromeDriver driver = getChromedriver();
+		 getChromedriver();
 	
 	     readfile();
+	     
 	}
 }
 	

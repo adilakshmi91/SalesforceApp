@@ -10,8 +10,8 @@ import BrowserUtility.LaunchBrowser;
 public class CreateAccountNewView extends LaunchBrowser{
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
-		XSSFSheet Sheet = readfile();
+		 getChromedriver();
+		 readfile();
 		
 		driver.findElement(By.xpath("//a[contains(text(),'Accounts')]")).click();
 		Thread.sleep(7000);

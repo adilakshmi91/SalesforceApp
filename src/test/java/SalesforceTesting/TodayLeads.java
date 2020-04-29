@@ -12,9 +12,8 @@ import BrowserUtility.LaunchBrowser;
 public class TodayLeads extends LaunchBrowser {
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
-		@SuppressWarnings("unused")
-		XSSFSheet Sheet = readfile();
+		 getChromedriver();
+		readfile();
 		
 		driver.findElement(By.linkText("Leads")).click();
 		Thread.sleep(7000);

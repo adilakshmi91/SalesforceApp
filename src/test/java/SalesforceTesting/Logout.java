@@ -11,9 +11,8 @@ import BrowserUtility.LaunchBrowser;
 public class Logout extends LaunchBrowser {
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
-		@SuppressWarnings("unused")
-		XSSFSheet Sheet = readfile();
+	     getChromedriver();
+		 readfile();
 	    driver.findElement(By.id("userNavButton")).click();
 		WebElement logout=driver.findElement(By.xpath("//a[contains(text(),'Logout')]"));
 		Actions act=new Actions(driver);

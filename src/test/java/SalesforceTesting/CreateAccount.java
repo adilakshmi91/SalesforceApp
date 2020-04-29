@@ -11,8 +11,8 @@ import BrowserUtility.LaunchBrowser;
 public class CreateAccount extends LaunchBrowser {
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
-		XSSFSheet Sheet = readfile();
+		getChromedriver();
+		readfile();
 		driver.findElement(By.xpath("//a[contains(text(),'Accounts')]")).click();
 		Thread.sleep(6000);
 		driver.findElement(By.xpath("//input[@name='new']")).click();

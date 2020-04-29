@@ -16,8 +16,8 @@ import org.openqa.selenium.interactions.Actions;
 public class Contacts extends Login {
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
-		XSSFSheet Sheet = readfile();
+		 getChromedriver();
+		readfile();
 		driver.findElement(By.xpath("//li[@id='Contact_Tab']")).click();
 		Thread.sleep(10000);
 		driver.findElement(By.xpath("//input[@name='new']")).click();

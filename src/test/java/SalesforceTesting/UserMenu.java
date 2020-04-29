@@ -9,9 +9,8 @@ import BrowserUtility.LaunchBrowser;
 public class UserMenu extends LaunchBrowser {
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
-		@SuppressWarnings("unused")
-		XSSFSheet Sheet = readfile();
+		getChromedriver();
+		 readfile();
 		driver.findElement(By.id("userNavLabel")).click();
 		Thread.sleep(3000);
 		driver.close();

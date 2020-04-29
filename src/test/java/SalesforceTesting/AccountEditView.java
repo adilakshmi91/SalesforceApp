@@ -11,7 +11,7 @@ import BrowserUtility.LaunchBrowser;
 public class AccountEditView extends LaunchBrowser{
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
+		 getChromedriver();
 		 readfile();
 	
 		driver.findElement(By.xpath("//a[contains(text(),'Accounts')]")).click();

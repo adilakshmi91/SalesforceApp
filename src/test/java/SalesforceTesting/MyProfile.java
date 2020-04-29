@@ -15,7 +15,7 @@ import BrowserUtility.LaunchBrowser;
 public class MyProfile extends LaunchBrowser {
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
+		 getChromedriver();
 		
 		readfile();
 		driver.findElement(By.id("userNavLabel")).click();
@@ -87,7 +87,7 @@ public class MyProfile extends LaunchBrowser {
     	  driver.switchTo().defaultContent();
 
         Thread.sleep(7000);
-       		close();
+       		
 	}
 		
 

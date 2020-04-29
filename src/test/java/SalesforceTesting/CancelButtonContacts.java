@@ -10,8 +10,8 @@ import BrowserUtility.LaunchBrowser;
 public class CancelButtonContacts extends LaunchBrowser {
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
-		XSSFSheet Sheet = readfile();
+		getChromedriver();
+	      readfile();
 		driver.findElement(By.xpath("//li[@id='Contact_Tab']")).click();
 		Thread.sleep(10000);
 		driver.findElement(By.xpath("//a[contains(text(),'Create New View')]")).click();

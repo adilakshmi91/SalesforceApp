@@ -14,18 +14,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LaunchBrowser {
-	    static ChromeDriver driver;
-	    public static ChromeDriver getChromedriver() {
+	    public static WebDriver driver;
+	    public static String file = "C:\\Users\\adila\\OneDrive\\Desktop\\Logindetails.xlsx";
+	    public static void getChromedriver() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://www.google.com");
 		driver.manage().window().maximize();
 		driver.get("https://www.salesforce.com");
 		driver.findElement(By.xpath("//a[contains(text(),'Login')]")).click();
-		return driver;
+		//return driver;
 	}
         public static XSSFSheet readfile() throws Exception {
-		String file = "C:\\Users\\adila\\OneDrive\\Desktop\\Logindetails.xlsx";
+		//String file = "C:\\Users\\adila\\OneDrive\\Desktop\\Logindetails.xlsx";
 		FileInputStream fi = new FileInputStream(file);
 		@SuppressWarnings("resource")
 		XSSFWorkbook myExcelBook = new XSSFWorkbook(fi);
@@ -39,7 +40,7 @@ public class LaunchBrowser {
 	}
 	        public static XSSFSheet readContacts() throws Exception {
 
-			String file = "C:\\Users\\adila\\OneDrive\\Desktop\\Logindetails.xlsx";
+			//String file = "C:\\Users\\adila\\OneDrive\\Desktop\\Logindetails.xlsx";
 			FileInputStream fi = new FileInputStream(file);
 			@SuppressWarnings("resource")
 			XSSFWorkbook myExcelBook = new XSSFWorkbook(fi);
@@ -47,7 +48,7 @@ public class LaunchBrowser {
 			return Sheet1;
 		}
 	         public static XSSFSheet readOpty() throws Exception {
-			String file = "C:\\Users\\adila\\OneDrive\\Desktop\\Logindetails.xlsx";
+			//String file = "C:\\Users\\adila\\OneDrive\\Desktop\\Logindetails.xlsx";
 			FileInputStream fi = new FileInputStream(file);
 			@SuppressWarnings("resource")
 			XSSFWorkbook myExcelBook = new XSSFWorkbook(fi);
@@ -55,7 +56,7 @@ public class LaunchBrowser {
 			return Sheet2;
 	         }
 	            public static XSSFSheet readLeads() throws Exception {
-	 			String file = "C:\\Users\\adila\\OneDrive\\Desktop\\Logindetails.xlsx";
+	 		//	String file = "C:\\Users\\adila\\OneDrive\\Desktop\\Logindetails.xlsx";
 	 			FileInputStream fi = new FileInputStream(file);
 	 		    XSSFWorkbook myExcelBook = new XSSFWorkbook(fi);
 	 		    XSSFSheet Sheet3 = myExcelBook.getSheet("Leads");
@@ -63,7 +64,7 @@ public class LaunchBrowser {
 	         }
 	         
 	                public static XSSFSheet readAccount() throws Exception {
-		 			String file = "C:\\Users\\adila\\OneDrive\\Desktop\\Logindetails.xlsx";
+		 			//String file = "C:\\Users\\adila\\OneDrive\\Desktop\\Logindetails.xlsx";
 		 			FileInputStream fi = new FileInputStream(file);
 		 			XSSFWorkbook myExcelBook = new XSSFWorkbook(fi);
 		 		    XSSFSheet Sheet4 = myExcelBook.getSheet("Accounts");
@@ -75,9 +76,7 @@ public class LaunchBrowser {
 	     		wait.until(ExpectedConditions.visibilityOf(eleToWait));
 	     		
 	     	}
-	           public static void close() {
-	        	   driver.close();
-	           }
+	          
 
 	  
 }

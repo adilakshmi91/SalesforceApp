@@ -14,8 +14,8 @@ import BrowserUtility.LaunchBrowser;
 public class BlockingEventCalender extends LaunchBrowser {
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
-		XSSFSheet Sheet = readfile();
+		getChromedriver();
+		readfile();
 		driver.findElement(By.xpath("//a[contains(text(),'Home')]")).click();
 		driver.findElement(By.xpath("//a[contains(text(),'Tuesday April 28, 2020')]")).click();
 		WebElement time=driver.findElement(By.xpath("//a[contains(text(),'4:00 PM')]"));

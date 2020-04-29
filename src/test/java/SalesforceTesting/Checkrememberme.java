@@ -12,7 +12,7 @@ import BrowserUtility.LaunchBrowser;
 public class Checkrememberme  extends LaunchBrowser{
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
+		 getChromedriver();
 		 readfile();
 		WebElement checkbox=driver.findElement(By.id("rememberUn"));
 		 if(!checkbox.isSelected()) {
@@ -30,7 +30,7 @@ public class Checkrememberme  extends LaunchBrowser{
 		Actions act=new Actions(driver);
 		act.moveToElement(logout).click().build().perform();
 		Thread.sleep(5000);
-		close();
+		
 
 	}
 

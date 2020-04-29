@@ -14,11 +14,9 @@ public class CheckErrorContacts extends LaunchBrowser {
 
 	public static void main(String[] args) throws Exception{
 		
-		ChromeDriver driver = getChromedriver();
-		@SuppressWarnings("unused")
-		XSSFSheet Sheet = readfile();
-	
-		driver.findElement(By.xpath("//li[@id='Contact_Tab']")).click();
+		getChromedriver();
+	    readfile();
+	    driver.findElement(By.xpath("//li[@id='Contact_Tab']")).click();
 		Thread.sleep(7000);
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[contains(text(),'Create New View')]"))));

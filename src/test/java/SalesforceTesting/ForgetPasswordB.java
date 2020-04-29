@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class ForgetPasswordB  extends Login{
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
+		 getChromedriver();
 		XSSFSheet Sheet = readfile();
 		Row row = Sheet.getRow(4);
 		driver.findElement(By.id("username")).sendKeys(row.getCell(0).getStringCellValue());

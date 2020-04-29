@@ -14,7 +14,7 @@ import BrowserUtility.LaunchBrowser;
 public class VerifyTabCostomization extends LaunchBrowser {
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
+	  getChromedriver();
 		XSSFSheet Sheet = readfile();
 		driver.findElement(By.xpath("//img[@class='allTabsArrow']")).click();
 		driver.findElement(By.xpath("//input[contains(@name,'customize')]")).click();

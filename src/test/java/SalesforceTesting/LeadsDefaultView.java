@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class LeadsDefaultView extends Login {
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
+		getChromedriver();
 		XSSFSheet Sheet = readfile();
 		Row row = Sheet.getRow(1);
 		

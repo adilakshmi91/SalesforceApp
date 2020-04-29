@@ -10,8 +10,8 @@ import BrowserUtility.LaunchBrowser;
 public class RandomEditLastname extends LaunchBrowser {
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
-		XSSFSheet Sheet = readfile();
+		 getChromedriver();
+         readfile();
 		driver.findElement(By.xpath("//a[contains(text(),'Home')]")).click();
 		driver.findElement(By.xpath("//h1[@class='currentStatusUserName']")).click();
 		driver.findElement(By.xpath("//a[@class='contactInfoLaunch editLink']//img")).click();

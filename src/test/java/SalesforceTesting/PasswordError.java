@@ -10,7 +10,7 @@ import BrowserUtility.LaunchBrowser;
 public class PasswordError extends LaunchBrowser{
 
 	public static void main(String[] args) throws Exception {
-		ChromeDriver driver = getChromedriver();
+		getChromedriver();
 		XSSFSheet Sheet = readfile();
 		Row row = Sheet.getRow(2);
 		driver.findElement(By.id("username")).sendKeys(row.getCell(0).getStringCellValue());
