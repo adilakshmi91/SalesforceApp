@@ -75,6 +75,9 @@ public class LaunchBrowser {
 	     		wait.until(ExpectedConditions.visibilityOf(eleToWait));
 	     		
 	     	}
+	           public static void close() {
+	        	   driver.close();
+	           }
 
 	  
 }

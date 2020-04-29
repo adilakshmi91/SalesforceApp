@@ -13,11 +13,16 @@ public class Checkrememberme  extends LaunchBrowser{
 
 	public static void main(String[] args) throws Exception {
 		ChromeDriver driver = getChromedriver();
-		XSSFSheet Sheet = readfile();
-		WebElement checkbox=driver.findElement(By.xpath("//input[@id='rememberUn']"));
+		 readfile();
+		WebElement checkbox=driver.findElement(By.id("rememberUn"));
 		 if(!checkbox.isSelected()) {
 			 checkbox.click();
+			 waitForPageElementToVisible(checkbox);
+			 System.out.println("checkbox is selected");
 			  }
+		 else {
+			 System.out.println("checkbox is not selected");
+		 }
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("//input[@id='Login']")).click();
 		driver.findElement(By.id("userNavLabel")).click();
@@ -25,7 +30,7 @@ public class Checkrememberme  extends LaunchBrowser{
 		Actions act=new Actions(driver);
 		act.moveToElement(logout).click().build().perform();
 		Thread.sleep(5000);
-		driver.close();
+		close();
 
 	}
 

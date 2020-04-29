@@ -19,7 +19,7 @@ public class MergeAccounts extends LaunchBrowser {
 		driver.findElement(By.xpath("//a[contains(text(),'Merge Accounts')]")).click();
 		XSSFSheet Sheet4= readAccount();
 		Row row1 = Sheet4.getRow(1);
-		driver.findElement(By.xpath("//input[@id='srch']")).sendKeys("Arhu");
+		driver.findElement(By.xpath("//input[@id='srch']")).sendKeys("Arhu1");
 		waitForPageElementToVisible(driver.findElement(By.xpath("//input[@name='srchbutton']")));
 		driver.findElement(By.xpath("//input[@name='srchbutton']")).click();
 		driver.findElement(By.xpath("//div[contains(@class,'pbBottomButtons')]//input[contains(@name,'goNext')]")).click();
